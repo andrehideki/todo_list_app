@@ -1,0 +1,43 @@
+.taskList {
+    margin-top: 4rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header div:first-child {
+    color: var(--blue);
+    font-weight: bolder;
+}
+
+
+.header div:last-child {
+    color: var(--purple);
+    font-weight: bolder;
+}
+
+.header div span {
+    display: inline-block;
+    background: var(--gray-400);
+    padding: .2rem .5rem;
+    color: var(--gray-100);
+    position: unset;
+    border-radius: 10px;
+    margin-left: .5rem;
+}
+
+.listContent {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--gray-300);
+    border-radius: 8px;
+
+    color: var(--gray-300);
+    line-height: 1.4;
+}

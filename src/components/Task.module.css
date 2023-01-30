@@ -1,0 +1,81 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    width: 100%;
+
+    background: var(--gray-400);
+    border-radius: 8px;
+    padding: .75rem;
+    margin-bottom: .5rem;
+    color: var(--gray-100);
+}
+
+.isCompleted {
+    display: flex;
+}
+
+.isCompleted span {
+    display: inline-block;
+    background-color: var(--gray-400);
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    cursor: pointer;
+    width: 1.3rem;
+    height: 1.3rem;
+    transition: .2s;
+}
+
+.isCompleted span:after {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 5px;
+    opacity: 100;
+    transform: rotate(-45deg);
+    width: 7px;
+    opacity: 0;
+    position: relative;
+    top: -6px;
+    left: 4px;
+}
+
+.isCompleted input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.isCompleted input[type="checkbox"]:checked + span {
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+
+.isCompleted input[type="checkbox"]:checked + span:after {
+  opacity: 1;
+}
+
+.isCompleted input[type="checkbox"]:checked ~ .task p {
+    color: red;
+}
+
+
+.task button {
+    border: none;
+    background: none;
+    color: var(--gray-300);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.task button:hover {
+    color: var(--danger);
+}
+
+.completedContent  {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
