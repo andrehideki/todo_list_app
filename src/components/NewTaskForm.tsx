@@ -12,6 +12,7 @@ export function NewTaskForm({ onNewTaksIsSubmited }: NewTaskFormProps) {
 
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
+        if (!newTask) return;
         setNewTask("");
         onNewTaksIsSubmited(newTask);
     }

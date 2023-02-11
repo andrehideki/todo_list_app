@@ -14,19 +14,7 @@ export interface TodoTask {
 
 function App() {
 
-  const [tasks, setTasks] = useState<TodoTask[]>([
-    {
-      id: generateUUIDV4().toString(),
-      content: "Aliqua irure occaecat incididunt minim velit.",
-      isCompleted: true
-    },
-    {
-      id: generateUUIDV4().toString(),
-      content: "Aliqua irure occaecat incididunt minim velit.",
-      isCompleted: false
-    }
-  ]);
-
+  const [tasks, setTasks] = useState<TodoTask[]>([]);
 
   function onNewTaskIsSubmited(task: string) {
     setTasks([...tasks, {
