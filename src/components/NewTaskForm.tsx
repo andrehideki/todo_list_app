@@ -23,7 +23,7 @@ export function NewTaskForm({ onNewTaksIsSubmited }: NewTaskFormProps) {
                 onChange={({target}) => setNewTask(target.value)}
                 value={newTask} 
             />
-            <button type="submit">
+            <button type="submit" disabled={!newTask}>
                 Criar
                 <PlusCircle size={24} />
             </button>
